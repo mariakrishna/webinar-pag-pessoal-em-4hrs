@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--declara para o navegador o tipo de documento que será aberto-->
+    <html lang="pt-BR"> <!--declara a linguagem da pagina para o navegador não abrir o botão de traduzir a pagina automaticamente-->
+    <head><!--passa info impot para o nav abrir e renderizar corretamente a pag -->
+        <meta charset="UTF-8"> <!--caracteres da pagina de acordo com a linguagem-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--TAGS SEM FILHOS!!!-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--faz adaptações para configuração de leitura de navegadores mobile-->
+        <title>Personal Page</title> <!--nome da página, é exibido na barra da aba-->
+        <!--css é outra linguagem, dá o estilo à pagina, parte visual-->
+        <style>
+
+            :root {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                margin: 0;
+                /*seletor pelo nome da tag*/
+            } 
+
+            h1 {
+                margin: 0;
+                text-shadow: 0 4px 4px #00000044;
+                width: 15ch;/*ch é a unidade que usa o como referencia o tamanho dos caracteres*/
+            }
+
+            .header { /*seletor id é único, só pode ser usado em um elemento!!! é usado com # no css*/
+                height: 50vh; /*unidade relativo a pagina renderizada "viewport height", também tem o width*/
+                background: linear-gradient(to right bottom, #FF4F4F, #FF7D1B) ;
+                color: #ffffff;
+                text-align: center;
+                display: grid;
+                place-items: center;
+                box-shadow: 0 4px 4px #00000044;
+            }
+
+            .profile {
+                position: relative; /*relativo em relação ao 0 do html, da direita pra esq, de baixo pra cima*/
+                top: -75px;
+                border: 5px dotted greenyellow;
+                text-align: center;
+            }
+
+            .profile p {
+                margin: 32px auto;
+                max-width: 120ch; /*75 a 120 caractereres por linha = regra do design, leitura melhor para o usuário*/
+                font-style: italic;
+            }
+            
+            .profile__avatar { /*seletor class é o mais utilizado*/
+                width: 150px; /*unidade relativa à tela do usuário*/
+                height: 150px;
+                border-radius: 50%;
+                border: 5px solid #fff;
+                box-shadow: 0 4px 4px #00000044;
+            }
+        </style>
+    </head>
+
+    <body>
+       <header class="header"> <!--header =/= head!!! head é a cabeça da pag! header é o cabeçalho-->
+        <h1>Olá, meu nome é Jane Doe</h1>
+       </header>
+       <section class="profile"> <!-- para postagens e noticias!-->
+        <img class="profile__avatar" src="./image.jpg" atl="Jane Doe"/>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+           Fugit nostrum quis sed nam similique architecto numquam 
+           sit voluptas ipsa qui eligendi, cum unde atque, beatae veritatis!
+            Corporis culpa corrupti odio.
+       </p>
+       </section>
+    </body>
+</html>
